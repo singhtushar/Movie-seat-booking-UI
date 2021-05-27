@@ -50,8 +50,10 @@ function populateUI(){
         movieSelect.selectedIndex = selectedMovieIndex;
     }
 
-    count.innerText = selectedSeat.length;
-    amount.innerText = (selectedSeat.length*(+movieSelect.value));
+    if(selectedSeat!==null && selectedSeat.length>0){
+        count.innerText = selectedSeat.length;
+        amount.innerText = selectedSeat.length * +movieSelect.value;
+    }
 
 }
 
